@@ -81,9 +81,23 @@ fn type_string() {
     print!("{}", char_100.unwrap()); // This will print called `Option::unwrap()` on a `None` value, we will see better ways of doing this
 }
 
+fn conditional() {
+    let number = 101;
+    // In Rust, you must ensure that the expression in conditionals evaluates to a boolean value (true or false).
+    // Unlike C/C++, Rust does not allow using integers directly in conditionals.
+    // For example, `if 1 {}` or `if 0 {}` will result in a compile-time error in Rust.
+
+    if number & 1 != 0 {
+        println!("The number is odd.");
+    } else {
+        println!("The number is even.");
+    }
+}
+
 fn main() {
     // Uncomment the function calls below to test each function
     // type_number();
     // type_boolean();
-    type_string();
+    // type_string();
+    conditional();
 }
