@@ -34,7 +34,41 @@ fn type_boolean() {
     }
 }
 
+fn type_string() {
+    // Mutability
+    // Immutable &str: String slices (&str) are immutable, meaning you cannot change the content they point to.
+    // This immutability requires careful handling when you need to modify strings.
+    //
+    // Mutable String: The String type is mutable, but operations that modify the string (like appending or inserting)
+    // can be complex due to the need to manage dynamic memory allocation and potential reallocation.
+
+    // Theory
+    // Strings are considered more complex in Rust (and in general) for several reasons:
+    // Rust's ownership system is designed to ensure memory safety without a garbage collector.
+    // Strings, especially String type, are dynamically allocated on the heap.
+    // Managing the ownership and lifetime of these strings can be challenging, particularly when passing them around in a program.
+
+    // Immutable &str
+    let name_immutable = "MyNameImmu";
+    // Mutable String
+    let name_mutable: String = String::from("MyNameMu");
+
+    // Printing the immutable and mutable strings
+    println!("Immutable name: {}", name_immutable);
+    println!("Mutable name: {}", name_mutable);
+
+    let str = String::from("String");
+    let char_0 = str.chars().nth(0);
+    // Notice `nth` returns an Option<char> because the element at the specified index might not exist.
+    // If the index is out of bounds, None is returned; otherwise, it returns Some(char).
+    let char_100 = str.chars().nth(100);
+
+    print!("{}", char_0.unwrap()); // You cannot simply print the char you need to unwrap it
+    print!("{}", char_100.unwrap()); // This will print called `Option::unwrap()` on a `None` value, we will see better ways of doing this
+}
+
 fn main() {
     // type_number();
-    type_boolean();
+    // type_boolean();
+    type_string();
 }
