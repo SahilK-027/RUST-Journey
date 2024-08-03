@@ -87,18 +87,43 @@ fn conditional() {
     // Unlike C/C++, Rust does not allow using integers directly in conditionals.
     // For example, `if 1 {}` or `if 0 {}` will result in a compile-time error in Rust.
 
-    if number & 1 != 0 {
+    if (number & 1) != 0 {
         println!("The number is odd.");
     } else {
         println!("The number is even.");
     }
 }
 
-fn for_loop(){
+fn for_loop() {
     // This loop will run 0 to 9 10 excluded
-    for i in 0..10{
+    for i in 0..10 {
         print!("{} ", i);
     }
+}
+
+// Return Type (-> i32):
+// The -> i32 syntax indicates the return type of the function. In this case, the function returns a value of type i32.
+fn get_sum(num1: i32, num2: i32) -> i32 {
+    return num1 + num2;
+}
+
+fn no_ref_increment(mut num: i32){
+    num += 1;
+}
+
+fn ref_increment(num: &mut i32){
+    *num += 1;
+}
+
+fn functions(){
+    println!("Sum: {}", get_sum(10, 20));
+
+    let mut a = 10; // `a` needs to be mutable to use `ref_increment`
+    no_ref_increment(a);
+    println!("NoRef Increment: {}", a); // Still prints 10, as `no_ref_increment` does not modify `a`
+
+    ref_increment(&mut a); // Now works correctly
+    println!("Ref Increment: {}", a); // Prints 11, as `ref_increment` modifies `a`
 }
 
 fn main() {
@@ -107,7 +132,8 @@ fn main() {
     // type_boolean();
     // type_string();
     // conditional();
-    for_loop();
+    // for_loop();
+    functions();
 }
 
 
