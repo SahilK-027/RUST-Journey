@@ -101,3 +101,49 @@ fn main() {
     // type_string();
     conditional();
 }
+
+
+// List of Common Operators in Rust
+// Here’s a list of common operators you can use in Rust:
+
+// Arithmetic Operators:
+// + (Addition): a + b
+// - (Subtraction): a - b
+// * (Multiplication): a * b
+// / (Division): a / b
+// % (Modulo): a % b
+
+// Comparison Operators:
+// == (Equal to): a == b
+// != (Not equal to): a != b
+// > (Greater than): a > b
+// < (Less than): a < b
+// >= (Greater than or equal to): a >= b
+// <= (Less than or equal to): a <= b
+
+// Logical Operators:
+// && (Logical AND): a && b
+// || (Logical OR): a || b
+// ! (Logical NOT): !a
+
+// Bitwise Operators:
+// & (Bitwise AND): a & b
+// | (Bitwise OR): a | b
+// ^ (Bitwise XOR): a ^ b
+// << (Left shift): a << b
+// >> (Right shift): a >> b
+
+// Assignment Operators:
+// = (Assignment): a = b
+// += (Add and assign): a += b
+// -= (Subtract and assign): a -= b
+// *= (Multiply and assign): a *= b
+// /= (Divide and assign): a /= b
+// %= (Modulo and assign): a %= b
+
+// Unary Operators:
+// - (Negation): -a
+// + (Unary plus): +a
+
+// Compound Assignment Operators:
+// Used for shorthand operations like +=, -=, etc.
