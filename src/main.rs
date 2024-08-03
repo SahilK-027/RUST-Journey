@@ -94,12 +94,20 @@ fn conditional() {
     }
 }
 
+fn for_loop(){
+    // This loop will run 0 to 9 10 excluded
+    for i in 0..10{
+        print!("{} ", i);
+    }
+}
+
 fn main() {
     // Uncomment the function calls below to test each function
     // type_number();
     // type_boolean();
     // type_string();
-    conditional();
+    // conditional();
+    for_loop();
 }
 
 
